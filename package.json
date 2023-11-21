@@ -14,6 +14,7 @@
     "start": "nodemon --exec electron . --watch ./ --ext .js,.ts,.html,.css,.vue"
   },
   "dependencies": {
+    "boxicons": "^2.1.4",
     "normalize.css": "^8.0.1",
     "stylus": "^0.62.0",
     "vue": "^3.3.4",

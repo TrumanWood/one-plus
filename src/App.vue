@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'</script>
+import HelloWorld from './components/HelloWorld.vue'
+import Sidebar from './components/Sidebar.vue'
+import 'boxicons'</script>
 
 <template>
   <header>
@@ -7,7 +9,7 @@ import HelloWorld from './components/HelloWorld.vue'</script>
 
     <div class="wrapper">
       <HelloWorld msg="You did it! this is new msg"/>
-
+      <Sidebar/>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
