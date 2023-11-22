@@ -1,6 +1,5 @@
-<script lang="ts" setup>
-  import {ref} from 'vue'
-  import 'boxicons';
+<script setup  lang="ts">
+  import { ref } from 'vue'
 
   const active = ref('home')
   const activeSidebar = ref(false)
@@ -32,6 +31,7 @@
     </vs-navbar>
     <vs-sidebar v-model="active" v-model:open="activeSidebar" absolute>
       <template #logo>
+        <box-icon name='wink-tongue' color='#195bff'></box-icon>
         one-plus
       </template>
       <template #header/>

@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import Sidebar from './components/Sidebar.vue'
-import 'boxicons'</script>
+  import HelloWorld from './components/HelloWorld.vue'
+  import Sidebar from './components/Sidebar.vue'
+  import 'boxicons'
+</script>
 
 <template>
   <header>
