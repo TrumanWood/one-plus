@@ -143,5 +143,6 @@
 </template>
 
 <style scoped lang="stylus">
-
+.vs-sidebar
+  border-radius: 0 15px 15px 0;
 </style>

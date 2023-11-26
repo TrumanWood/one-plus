@@ -5,7 +5,7 @@
 
 </script>
 <template>
-  <div>
+  <div class="content">
     <HomeSidebar />
     <header>
       <HomeHeader />
@@ -13,7 +13,8 @@
   </div>
 </template>
 <style scoped lang="stylus">
-  header
+  .content
     line-height 1.5
-    max-width 100vw
+    width calc(100% - 50px)
+    margin-left 50px
 </style>
