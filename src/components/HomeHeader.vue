@@ -23,9 +23,10 @@
       <vs-col :sm="3"/>
     </vs-row>
 
-    <vs-row>
-      <vs-col>
-        t1
+    <vs-row class="header-item">
+      <vs-col v-for="_ in 6" :key="_" :sm="2">
+        <i class="bx bx-home" />
+        <p>{{ _ }}</p>
       </vs-col>
     </vs-row>
   </div>
@@ -33,7 +34,7 @@
 
 <style scoped lang="stylus">
   .header-content
-    padding 1rem 0
+    padding 1rem 0 .2rem 0
     background #f4f9ff
     .vs-row
       margin .5rem 0
@@ -41,5 +42,9 @@
       text-align center
     .header-search  div
       width 100%
-
+    .header-item {
+      margin-top 2rem
+      width 90%
+      text-align center
+    }
 </style>
