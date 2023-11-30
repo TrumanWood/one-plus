@@ -5,10 +5,6 @@ const note = reactive({
   isInit: true
 });
 
-const handleMouseDown = () => {
-  console.log('handleMouseDown');
-  note.isInit = false;
-}
 
 </script>
 
@@ -20,14 +16,10 @@ const handleMouseDown = () => {
   <main>
     <!-- 文本输入框 -->
     <div class="note-view-wrapper">
-      <!-- 默认提示 -->
-      <div class="note-view-container" v-if="note.isInit">
-        <span>&nbsp;</span>
-      </div>
       <!-- 展示区 -->
-      <article class="note-editor" @mousedown="handleMouseDown">
+      <div class="contenteditable" placeholder="Press ‘space’ for AI, ‘/’ for commands…" data-content-editable-leaf="true" contenteditable="true" >
 
-      </article>
+      </div>
     </div>
 
     <!-- 统计字数 -->
@@ -36,23 +28,16 @@ const handleMouseDown = () => {
 </template>
 
 <style scoped lang="stylus">
-  .note-view-wrapper > .note-view-container::before
-    position absolute
-    content "输入“/”可插入内容"
-    color rgb(204, 204, 204)
-    white-space nowrap
-    text-indent 0
-    display inline-block
- .note-view-wrapper
-    position relative
+  [contenteditable]:empty:after
+    content: attr(placeholder)
+  .contenteditable
+    max-width 100%
     width 100%
-    height 100%
-    .note-editor
-      width 100%
-      height 100rem
- .note-view-container
-  .word-count-container
-    position absolute
-    right 1rem
-    bottom 1rem
+    white-space pre-wrap
+    word-break break-word
+    caret-color rgb(55, 53, 47)
+    padding: 3px 2px
+    min-height: 1em
+    color rgb(55, 53, 47)
+    -webkit-text-fill-color rgba(55, 53, 47, 0.5)
 </style>
